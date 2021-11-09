@@ -1,2 +1,2 @@
 # recipes
-No BS recipea
+No BS recipes
