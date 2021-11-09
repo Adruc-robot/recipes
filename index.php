@@ -16,11 +16,10 @@
     <div class="recipesWrapper">
         <div class="recipe" 
     <?php
-        include("function_tst1.php"); 
-        //$serverInfo = "food_db";
-        $serverInfo = "localtest_db";
-        //would like to pass over the name of the PDO object to the new_conn, but can't get it to work. 
-        new_conn ($serverInfo,$pdo);
+        
+        include ("includes/dbinfo.inc.php");
+
+        $pdo = new PDO($dns, $user, $pass, $opt);
                         
         $query1String = "select group_concat(i.name separator '|') guh,r.name,r.the_key from recipes r inner join recipe_ingredients ri on r.the_key = ri.recipe inner join ingredients i on ri.ingredient = i.the_key group by r.name";
         $query2String = "select r.the_key, group_concat(concat(rs.step_number,'.  ',rs.step_text) separator '|') ger from recipes r inner join recipe_steps rs on r.the_key = rs.recipe group by r.name";
