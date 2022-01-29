@@ -1,7 +1,7 @@
 <?php
-    $user = "php_dude";
+    $user = "no_way";
     $host = "localhost:3306";
-    $pass = "Op1inion2";
+    $pass = "Idontthinkso";
     $db = "food_stuffs";
     $charset = "utf8mb4";
     $dns = "mysql:host={$host};dbname={$db};charset={$charset}";
